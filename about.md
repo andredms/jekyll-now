@@ -12,4 +12,4 @@ Enjoy design and currently working as a front-end developer.
 
 ### Contact 
 
-[email@domain.com](mailto:andre.d.samarin@gmail.com)
+[andre.d.samarin@gmail.com](mailto:andre.d.samarin@gmail.com)
