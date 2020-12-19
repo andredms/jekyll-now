@@ -164,6 +164,8 @@ As the name suggests…it cracks .zip files. I decided it’d be best to run it 
 fcrackzip -v -u -D -p rockyou.txt output.zip 
 ```
 
+(-v for verbose, -u to unzip and weed out wrong passwords, -D for using a dictionary and -p to provide a password file).
+
 Three minutes later, we got a match with 'craccer':
 
 ```
