@@ -68,9 +68,9 @@ Prior to this challenge, I had never extracted payloads out of packets, but Goog
 
 I knew that in order to just get the data we wanted, we needed to cut a few things out:
 
-The 0000, 0010, 0020 part to the left hand side of the hex.
-The ASCII decoded part to the right hand side of the hex.
-All the ICMP header fluff that stood between us and the flag.
+1) The 0000, 0010, 0020 part to the left hand side of the hex.
+2) The ASCII decoded part to the right hand side of the hex.
+3) All the ICMP header fluff that stood between us and the flag.
 
 After much messing around I came up with the following script using Awk, that did exactly the above, except for 3):
 ```
