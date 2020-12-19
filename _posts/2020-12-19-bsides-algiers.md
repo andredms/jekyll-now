@@ -111,7 +111,7 @@ tr -d "\n" < trimmed,txt > trimmed2.txt
 
 ![image](https://i.imgur.com/uEvVXs1.png)
 
-We were now one step closer to getting the flag, however the ICMP header fields stood in the way (i.e. the dead0000beefcafe0000babe IPv6 addresses, which were definitely not part of the data we wanted). Looking at the structure of an ICMP packet, we saw that we could ignore the first 84 characters and just get the remaining 96 characters (e.g. the blue highlighted part in the non-modified payload).
+We were now one step closer to getting the flag, however the ICMP header fields stood in the way (i.e. the dead0000beefcafe0000babe IPv6 addresses, which were definitely not part of the data we wanted). Looking at the structure of an ICMP packet, we saw that we could ignore the first 84 characters and just get the remaining 96 characters (e.g. the blue highlighted part in the non-modified payload):
 
 ![image](https://i.imgur.com/IUDRT1C.png)
 
@@ -132,7 +132,7 @@ for packet in capture:
         output.write(packet.load) # write packet data to output.bin
  ```
 
-Upon running the Python script, which essentially did what I described manually doing above, we finally got the data we needed in the form of output.bin. To ensure we’d saved it with the right extension, we ran:
+Upon running the script, which essentially did what I was doing before, we finally got the data we needed in the form of output.bin. To ensure we’d saved it with the right extension, we ran:
 
 ```
 file output.bin
@@ -144,7 +144,7 @@ which output:
 output.bin: Zip archive data, at least v2.0 to extract
 ```
 
-Turns out, it wasn’t actually a .jpg we were getting - but rather a .zip file which contained a .jpg. We thought that surely after all this we’d be able to extract the .zip file and grab the flag no problem, however, it wasn’t so easy as the file was password protected.
+Turns out, it wasn’t actually a .jpg we were getting - but rather a .zip file which contained a .jpg. We thought that surely after all this we’d be able to extract the file and grab the flag no problem, however, it wasn’t so easy as the file was password protected.
 
 # Cracking Passwords
 We weren’t prepared to dive back into Wireshark to try find a key for the .zip somewhere, as it wasn’t even guaranteed to be there, so I did some Googling for a .zip cracker tool and came across the following: [frackzip](https://github.com/hyc/fcrackzip)
