@@ -39,9 +39,13 @@ This greatly streamlines the amount of packets we have to look at and we can now
 
 Outside of a CTF environment, this may have looked like some form of DDoS attempt (ping flood), however upon looking at the first ping, we can see 'flag.jpg' in the data section of the packet. 
 
+![image](https://i.imgur.com/o8zjNlT.png)
+
 This lets us know that there’s some form of exfiltration going on, or ICMP tunnelling, as a ping request wouldn’t typically have a crafted payload like the one above. It’s also worth noting we stumbled upon this by complete chance.
 
-One thing we immediately tried looking for is the .jpg header signature (ffd8) to check that it wasn’t just a red herring. To our (not so much) surprise, packet 1908 contained it. 
+One thing we immediately tried looking for is the .jpg header signature (ffd8) to check that it wasn’t just a red herring. This can be done via ctrl (or cmd) + f, typing in 'ffd8' and setting the filter to 'Hex Value' (as per the screenshot below). To our (not so much) surprise, packet 1908 contained it. 
+
+![image](https://i.imgur.com/xVNMYs1.png)
 
 # Extracting Data
 We now knew that there was an image being tunnelled through ICMP, but, as you could imagine, there was the issue of actually extracting it from the network capture. This is where some great, and not so great, solutions were born.
@@ -54,7 +58,11 @@ icmp && ip.src != 185.245.99.2 && !icmp.resp_not_found
 
 Prior to this challenge, I had never extracted payloads out of packets, but Googling how to do this gave the option of File -> Export Packet Dissections -> As Plain Text. I unchecked all but the following options:
 
+![image](https://i.imgur.com/6deWChv.png)
+
 …which then dumped the hex payloads from the packets to dump.txt 
+
+![image](https://i.imgur.com/Um4uudc.png)
 
 I knew that in order to just get the data we wanted, we needed to cut a few things out:
 
@@ -87,7 +95,9 @@ print x
 
 Prints the final string.
 
-After running this, we now get a trimmed text file which looks a little something like….
+After running this, we now get a trimmed text file which looks a little something like…
+
+![image](https://i.imgur.com/ewE8bah.png)
 
 A simple tr command can get rid of the newlines for us: 
 
@@ -96,6 +106,8 @@ tr -d "\n" < trimmed,txt > trimmed2.txt
 ```
 
 (-d for delete, "\n" for new line, input trimmed.txt, output trimmed2.txt
+
+![image](https://i.imgur.com/uEvVXs1.png)
 
 We were now one step closer to getting the flag, however the ICMP header fields stood in the way (i.e. the dead0000beefcafe0000babe IPv6 addresses, which were definitely not part of the data we wanted). Looking at the structure of an ICMP packet, we saw that we could ignore the first 84 characters and just get the remaining 96 characters:
 
