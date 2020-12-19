@@ -30,6 +30,13 @@ The file provides a file - capture.pcap which we will use Wireshark to analyse. 
 
 This greatly streamlines the amount of packets we have to look at and we can now see some out of the ordinary behaviour. We’re greeted by 25,000-ish ICMP packets, which if we turn the filter off, look as if they’ve been covered up by HTTPS traffic. Perhaps the attacker was trying to disguise their mischief?
 
+![image](https://i.imgur.com/APYBiZJ.png)
+*No filter*
+
+![image](https://i.imgur.com/iQSJG9W.png)
+*Filter applied*
+
+
 Outside of a CTF environment, this may have looked like some form of DDoS attempt (ping flood), however upon looking at the first ping, we can see 'flag.jpg' in the data section of the packet. 
 
 This lets us know that there’s some form of exfiltration going on, or ICMP tunnelling, as a ping request wouldn’t typically have a crafted payload like the one above. It’s also worth noting we stumbled upon this by complete chance.
