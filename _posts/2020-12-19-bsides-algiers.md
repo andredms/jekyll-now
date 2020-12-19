@@ -22,7 +22,7 @@ It’s Complicated My Pal
 >Hey pal, I was sniffing some packets and stumbled upon some [weird traffic](https://drive.google.com/file/d/1nRXcYuAYLQUsgEc9wC_wfP0BYWfv_azS/view?usp=sharing), no idea what it is though. Could you take a look at it? It's complicated for me and I can't analyze it by myself.
 
 # Initial Analysis
-The link in the challenge descrption contains capture.pcap, which we will use Wireshark to analyse. One thing I like to do as soon as I get network traffic is go into Analyse -> Conversations and sort by port number to get a better idea of the type of traffic we’re dealing with. Immediately we can see there’s lots HTTPS traffic - which we can ignore as without a key to crack it, it’s effectively useless. The following filter works via dismissing all traffic going to port 443 (HTTPS). 
+The link in the challenge description contains capture.pcap, which we will use Wireshark to analyse. One thing I like to do as soon as I get network traffic is go into Analyse -> Conversations and sort by port number to get a better idea of the type of traffic we’re dealing with. Immediately we can see there’s lots HTTPS traffic - which we can ignore as without a key to crack it, it’s effectively useless. The following filter works via dismissing all traffic going to port 443 (HTTPS). 
 
 ```
 !tcp.port==443
