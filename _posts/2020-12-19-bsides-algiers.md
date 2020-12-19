@@ -48,7 +48,7 @@ One thing we immediately tried looking for is the .jpg header signature (ffd8) t
 ![image](https://i.imgur.com/xVNMYs1.png)
 
 # Extracting Data
-We now knew that there was an image being tunnelled through ICMP, but, as you could imagine, there was the issue of actually extracting it from the network capture. This is where some great, and not so great, solutions were born.
+We now knew that there was an image being tunnelled through ICMP, but, as you could imagine, there was the issue of actually extracting it from the network capture. This is where some great, and not so great, solutions were tried.
 
 Firstly, I figured that all the data we needed would be being transferred via echo requests from 192.168.1.200 -> 185.245.99.2. We wouldn’t really need to worry about the replies from the client or the (no response found!) packets, as they wouldn’t actually contain the data being transferred. I created a new refined filter so we could prepare the ICMP payloads for dumping:
 
