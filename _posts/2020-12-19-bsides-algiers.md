@@ -124,7 +124,7 @@ We were now one step closer to getting the flag, however the ICMP header fields 
 ![image](https://i.imgur.com/IUDRT1C.png)
 
 # More Automation 
-Before continuing down this painful path of writing scripts to edit .txt files, Pix suggested that we use Scapy to grab the pcap data and dump the hex we actually want that way (a far more elegant and logical solution). I’m not entirely sure why I didn’t think of this myself...but we came up with the following Python script:
+Before continuing down this painful path of writing scripts to edit .txt files, Pix suggested that we use Scapy to grab the pcap data and dump the hex we actually want that way (a far more elegant and logical solution). I’m not entirely sure why I didn’t think of this myself but I'll be definitely following this approach in the future...we came up with the following Python script:
 
 ```python
 from scapy.all import *
