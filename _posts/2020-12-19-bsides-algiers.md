@@ -28,7 +28,7 @@ The link in the challenge description contains capture.pcap, which we will use W
 !tcp.port==443
 ```
 
-This greatly streamlines the amount of packets we have to look at and we can now see some out of the ordinary behaviour. We’re greeted by 25,000-ish ICMP packets, which if we turn the filter off, look as if they’ve been covered up by HTTPS traffic. Perhaps the attacker was trying to disguise their mischief?
+This greatly streamlines the amount of packets we have to look at and shines the light on some odd behaviour. We’re greeted by 25,000-ish ICMP packets, which if we turn the filter off, look as if they’ve been covered up by HTTPS traffic. Perhaps the attacker was trying to disguise their mischief?
 
 ![image](https://i.imgur.com/APYBiZJ.png)
 **No filter**
