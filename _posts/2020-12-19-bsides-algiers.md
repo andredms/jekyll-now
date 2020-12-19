@@ -41,7 +41,7 @@ Outside of a CTF environment, this may have looked like some form of DDoS attemp
 
 ![image](https://i.imgur.com/o8zjNlT.png)
 
-This lets us know that there’s some form of exfiltration going on, or ICMP tunnelling, as a ping request wouldn’t typically have a crafted payload like the one above. It’s also worth noting we stumbled upon this by complete chance.
+This lets us know that there’s some form of exfiltration going on, or [ICMP tunnelling](https://en.wikipedia.org/wiki/ICMP_tunnel), as a ping request wouldn’t typically have a crafted payload like the one above. It’s also worth noting we stumbled upon this by complete chance.
 
 One thing we immediately tried looking for is the .jpg header signature (ffd8) to check that it wasn’t just a red herring. This can be done via ctrl (or cmd) + f, typing in 'ffd8' and setting the filter to 'Hex Value' (as per the screenshot below). To our (not so much) surprise, packet 1908 contained it. 
 
