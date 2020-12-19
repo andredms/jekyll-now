@@ -76,9 +76,9 @@ I knew that in order to get the data we wanted, we needed to cut a few things ou
 
 3) All the ICMP header fluff that stood between us and the flag.
 
-After much messing around I came up with the following script using Awk, that did exactly the above, except for point three:
+After much messing around I came up with the following script using ``awk``, that did exactly the above, except for point three:
 ```
-awk '{x="";x=substr($0,5,50);gsub(/ +/,"",x);print x}' dump.txt > trimmed.txt
+awk '{x = ""; x = substr($0,5,50); gsub(/ +/,"",x); print x}' dump.txt > trimmed.txt
 ```
 
 Breaking this down:
