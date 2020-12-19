@@ -133,7 +133,7 @@ import base64
 
 capture = rdpcap('capture.pcap') # our pcap file
 
-output = open('output.bin','wb') # save dumped data to output.bin
+output = open('output.bin','wb') # save dumped data as bytes to output.bin
 
 for packet in capture:
     # if packet is ICMP and type is 8 (echo request)
