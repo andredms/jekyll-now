@@ -136,7 +136,7 @@ for packet in capture:
         output.write(packet.load) # write packet data to output.bin
  ```
 
-Upon running the script, which essentially did what I was doing before, we finally got the data we needed in the form of output.bin. To ensure we’d saved it with the right extension, we ran:
+Upon running the script, which essentially did what I was doing before, we finally got the data we needed in the form of output.bin. To ensure we’d saved it with the right extension we ran:
 
 ```
 file output.bin
