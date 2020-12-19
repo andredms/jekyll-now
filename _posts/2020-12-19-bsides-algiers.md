@@ -41,7 +41,7 @@ This greatly streamlines the amount of packets we have to look at and uncovers s
 **Filter applied**
 
 
-Outside of a CTF environment, this may have looked like some form of DDoS attempt (ping flood), however upon looking at the first ping, we can see 'flag.jpg' in the data section of the packet. 
+Outside of a CTF environment, this may have looked like some form of DDoS attempt ([ping flood](https://www.imperva.com/learn/ddos/ping-icmp-flood/)), however upon looking at the first ping, we can see 'flag.jpg' in the data section of the packet. 
 
 ![image](https://i.imgur.com/o8zjNlT.png)
 
