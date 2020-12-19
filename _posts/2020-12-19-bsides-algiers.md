@@ -56,7 +56,7 @@ Firstly, I figured that all the data we needed would be being transferred via ec
 icmp && ip.src != 185.245.99.2 && !icmp.resp_not_found
 ```
 
-The ``icmp`` part gets us just the ICMP traffic, ``ip.src != 185.245.99.2`` ensures that we don’t get any replies from 185.245.99.2 (who 192.168.1.200 is sending the data to) and ``!icmp.resp_not_found`` filters out all of the (no response found!) packets. We now had data ripe for the dumping. 
+The ``icmp`` part gets us just ICMP traffic, ``ip.src != 185.245.99.2`` ensures that we don’t get any echo replies from 185.245.99.2 (who 192.168.1.200 is sending the data to) and ``!icmp.resp_not_found`` filters out all of the (no response found!) packets. We now had data ripe for the dumping. 
 
 Prior to this challenge, I had never extracted payloads out of packets, but Googling how to do this gave the option of File -> Export Packet Dissections -> As Plain Text. I unchecked all but the following options:
 
