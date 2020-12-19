@@ -11,7 +11,11 @@ My team for this CTF was 0xTBD and myself and @Pix worked on this particular sol
 It’s Complicated My Pal
 
 Category: Forensics
+
+
 Points: 500
+
+
 Requirements: Wireshark, Python, Scapy, fcrackzip.
 
 
