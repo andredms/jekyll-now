@@ -111,7 +111,9 @@ tr -d "\n" < trimmed,txt > trimmed2.txt
 
 ![image](https://i.imgur.com/uEvVXs1.png)
 
-We were now one step closer to getting the flag, however the ICMP header fields stood in the way (i.e. the dead0000beefcafe0000babe IPv6 addresses, which were definitely not part of the data we wanted). Looking at the structure of an ICMP packet, we saw that we could ignore the first 84 characters and just get the remaining 96 characters:
+We were now one step closer to getting the flag, however the ICMP header fields stood in the way (i.e. the dead0000beefcafe0000babe IPv6 addresses, which were definitely not part of the data we wanted). Looking at the structure of an ICMP packet, we saw that we could ignore the first 84 characters and just get the remaining 96 characters (e.g. the blue highlighted part in the non-modified payload).
+
+![image](https://i.imgur.com/IUDRT1C.png)
 
 # More Automation 
 Before continuing down this painful path of writing scripts to edit .txt files, Pix suggested that we use Scapy to grab the pcap data and dump the hex we actually want that way (a far more elegant and logical solution). I’m not entirely sure why I didn’t think of this myself...but we came up with the following Python script:
