@@ -144,7 +144,7 @@ which output:
 output.bin: Zip archive data, at least v2.0 to extract
 ```
 
-Turns out, it wasn’t actually a .jpg we were getting - but rather a .zip file which contained a .jpg. We thought that surely after all this we’d be able to extract the file and grab the flag no problem, however, it wasn’t so easy as the file was password protected.
+Turns out, it wasn’t actually a .jpg we were getting - but rather a .zip file which contained a .jpg. We thought that surely after all this we’d be able to extract the file and grab the flag no problem, however it wasn’t so easy as the file was password protected.
 
 # Cracking Passwords
 We weren’t prepared to dive back into Wireshark to try find a key for the .zip somewhere, as it wasn’t even guaranteed to be there, so I did some Googling for a .zip cracker tool and came across the following: [frackzip](https://github.com/hyc/fcrackzip)
