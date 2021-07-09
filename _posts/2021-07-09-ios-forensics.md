@@ -88,13 +88,15 @@ Text messages are located within ```sms.db``` - this houses both existing and de
 * 'flags' which tell if the message was sent (3) or recieved (2).
 * 'read' which tells if the message was read (1).
 
-Here we can see a message from our seized device to another with the message: ```Put the money in the bag!```. 
+Here we can see a message from our seized device to another with the message: ```2am @ Bob's. b there```. 
 
-![](https://i.imgur.com/MFjpYwP.png)
+![](https://i.imgur.com/VEW57Vn.png)
 
 If we check the 'attatchments' table we can see that the person also included ```IMG_0002.HEIC``` with the text (which we found within ```private/var/mobile/media/DCIM/100APPLE``` earlier):
 
 ![](https://i.imgur.com/R24b88B.png)
+
+Deleted messages can be found in the 'deleted_messages' table. 
 
 ### Personal Contacts
 
