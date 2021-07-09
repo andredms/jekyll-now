@@ -110,7 +110,7 @@ Browsing activity is located within ```History.db```. Here we can see the user o
 
 ```private/var/mobile/Applications```
 
-When an application is downloaded, a new directory is created within the ```mobile/Application``` folder. ```info.plist``` is included in all application directories and application specific usernames, passwords, cookies and images can also be found here. In my example, we can see that the user downloaded ```Angry Birds 2```:
+When an application is downloaded, a new directory is created within the ```mobile/Application``` folder. Application specific usernames, passwords, cookies and images can be found here. 
 
 ### Keystrokes
 
@@ -151,7 +151,7 @@ The call history of an iOS device is located within ```call_history.db```. The '
 Applications such as Camera often store the longitude and latitude of where a photo was taken. The ```consolidated.db``` file contains geolocation data for every cell tower the iOS device utilises. Tools such as [iPhone Tracker](peterwarden.github.com/iPhoneTracker) pull the aforementioned file and provide a graphical display of where the iOS device has been. 
 
 # Tools
-There are a variety of tools, that all use different methods that can be used in a forensics investigation on a seized iOS device:\
+There are a variety of tools, that all use different methods that can be used in a forensics investigation on a seized iOS device:
 
 [Scalpel](https://github.com/sleuthkit/scalpel)\
 [Paraben Device Seizure](https://paraben.com/paraben-for-mobile-forensics/)\
