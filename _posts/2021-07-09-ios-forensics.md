@@ -70,6 +70,10 @@ We can even view the longitutde and latitude of where the photo was taken by loo
 
 ![](https://i.imgur.com/3Rxqogz.png)
 
+Alternatively, you can also use [ExifTool](https://exiftool.org/) on the command-line to find such information: ```exiftool IMG_0002.HEIC | grep GPS```.
+
+![](https://i.imgur.com/scalbLl.png)
+
 ### Deleted Images
 
 ```private/var/mobile/Media/PhotoData/Thumbnails```
