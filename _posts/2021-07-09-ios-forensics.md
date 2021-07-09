@@ -48,7 +48,7 @@ Next, we'll transfer the files of interest from the seized device to our forensi
 
 # File Transfer
 
-We'll now need to find the IP address of our device - to do this, neviate to Settings > Wi-Fi and tap the ```i``` icon next to the connected network name. Locate the ```IP Address``` field under ```IPV4 Addresses``` and take note of it.
+We'll now need to find the IP address of our device - to do this, navgiate to Settings > Wi-Fi and tap the ```i``` icon next to the connected network name. Locate the ```IP Address``` field under ```IPV4 Addresses``` and take note of it.
 
 Open up a terminal on your forensics station and type the following: ```scp -r root@<iphoneIP>:/private/var/mobile/ ~/Desktop``` to copy all files in the ```private/var/mobile``` directory. This directory contains many files that will help us build a case. If prompted for a password, the default is ```alpine```.
 
