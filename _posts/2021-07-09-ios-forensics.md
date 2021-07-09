@@ -27,7 +27,7 @@ A plist (property list) is a data file that stores information on iOS and OSX op
 # Notes
 * In a real world scenario, it may be wise to turn the iPhone on to airplane mode to prevent a third-party from tampering with any evidence through remote access. 
 * If a device is passcode protected it'll be a little more challenging to retrieve the data. 
-* I'll be using my own network for this walkthrough, however it's also possible to [set up your own network](https://github.com/tcurdt/iProxy/wiki/Configuring-iProxy) if you don't wish to introduce the seized device on to your own network. 
+* I'll be using my own network for this walkthrough, however it's also possible to [set up your own network](https://github.com/tcurdt/iProxy/wiki/Configuring-iProxy) if you'd like to isolate the device entirely. 
 
 # Setup
 Grab your phone and connect it to your computer with a lightning cable. Open up checkra1n and press ```start```. This will put the device in [DFU mode](https://www.theiphonewiki.com/wiki/DFU_Mode). 
