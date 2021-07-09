@@ -2,7 +2,6 @@
 layout: post
 title: iOS Forensics in 2021
 description: I'm beginning to delve into computer forensics and hopefully create a habit out of exploring new forensic techniques on devices. Here's my first guide for an iOS device.
-image: https://i.imgur.com/iQSJG9W.png
 ---
 
 I'm beginning to delve into computer forensics and hopefully create a habit out of exploring new forensic techniques on devices. Here's my first guide for an iOS device (note - these steps have only been tested and provded on iPhone X and lower). There are many different ways to acquire data from a sized device, however this guide will focus on the most common way - [jailbreaking](https://www.kaspersky.com/resource-center/definitions/what-is-jailbreaking).
