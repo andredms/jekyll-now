@@ -74,7 +74,7 @@ We can even view the longitutde and latitude of where the photo was taken by loo
 
 ```/private/var/mobile/Library/SMS```
   
-Text messages are located within ```sms.db``` - this houses both existing and deleted conversations. The tables 'message' and 'attatchments' will contain the most interesting information. The message table contains a row for each message - each row contains the following information:
+Text messages are located within ```sms.db``` - this houses both existing and deleted conversations. The tables 'message' and 'attatchments' will contain the most interesting information. The 'message' table contains a row for each message - each row contains the following information:
 
 * Recieving phone number.
 * Message body.
@@ -86,7 +86,7 @@ Here we can see a message from our seized device to another with the message: ``
 
 ![](https://i.imgur.com/MFjpYwP.png)
 
-If we check the ```attatchments``` table we can see that the person also included ```IMG_0002.HEIC``` with the SMS (which we found within ```private/var/mobile/media/DCIM/100APPLE``` earlier):
+If we check the 'attatchments' table we can see that the person also included ```IMG_0002.HEIC``` with the text (which we found within ```private/var/mobile/media/DCIM/100APPLE``` earlier):
 
 ![](https://i.imgur.com/R24b88B.png)
 
@@ -94,7 +94,7 @@ If we check the ```attatchments``` table we can see that the person also include
 
 ```/private/var/mobile/Library/AddressBook```
 
-A device's contacts can be found within ```AddressBook.sqlitedb```. The 'ABPerson' table contains the person's first and last name, birthday, job, title, nickname ect. The 'ABMultiValue' contains the column 'value' which has the e-mail and/or phone number of the individual in 'ABPerson'. In the below example, we can see that our siezed device had three contacts:
+A device's contacts can be found within ```AddressBook.sqlitedb```. The 'ABPerson' table contains the person's first and last name, birthday, job, title, nickname ect. The 'ABMultiValue' contains the column 'value' which has the e-mail and/or phone number of the individual in 'ABPerson'. In the below example, we can see that our siezed device has three contacts:
 
 ![](https://i.imgur.com/kQKE7NB.png)
 
