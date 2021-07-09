@@ -56,7 +56,7 @@ Open up a terminal on your forensics station and type the following: ```scp -r r
 
 # Building a Case
 
-There's a lot to filter through here, however, there are some specific files that are of interest to us. If you don't feel like copying the entire ```/mobile``` directory feel free to pick and choose from below:
+If you don't feel like copying the entire ```/mobile``` directory feel free to pick and choose what you download from below:
 
 ### Images
 
