@@ -22,7 +22,7 @@ A structured way to organise data. Mobile devices often use SQLite - for example
 
 ### Plist 
 
-A plist (property list) is a data file that stores information on iOS and OSX operating systems. A plsit can store strings, dates, boolean values, numbers and binary values. 
+A plist (property list) is a data file that stores information on iOS and OSX. A plsit can store strings, dates, boolean values, numbers and binary values. 
 
 # Notes
 * In a real world scenario, it may be wise to turn the iPhone on to airplane mode to prevent a third-party from tampering with any evidence through remote access. 
