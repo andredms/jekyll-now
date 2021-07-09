@@ -25,7 +25,7 @@ A structured way to organise data. Mobile devices often use SQLite - for example
 A plist (property list) is a data file that stores information on iOS and OSX operating systems. A plsit can store strings, dates, boolean values, numbers and binary values. Browsing history, favourites and configuration data can be stored in a plist.
 
 # Notes
-* In a real world scenario, it may be wise to turn the iPhone on to airplane mode to prevent a third-party from tampering with any evidence through remote access.\ 
+* In a real world scenario, it may be wise to turn the iPhone on to airplane mode to prevent a third-party from tampering with any evidence through remote access. 
 * If a device is passcode protected it'll be a little more challenging to retrieve the data. 
 * I'll be using my own network for this walkthrough, however it's also possible to [set up your own network](https://github.com/tcurdt/iProxy/wiki/Configuring-iProxy) if you don't wish to introduce the seized device on to your own network. 
 
